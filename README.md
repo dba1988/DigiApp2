@@ -8,7 +8,7 @@ start forntend : http://localhost:3000
 
 both requiremnt works as backend with nodejs and front end with reactjs 
 database sorted in Mongocloud.
-mongoose package used in this prohect to connect with mongodb 
+mongoose package used in this project to connect with mongodb 
 
 
 List of API 
