@@ -1,0 +1,25 @@
+<form class="form-signin" action="/users/login" method="POST">
+    <div class="text-center mb-4">
+      <img class="mb-4" src="https://seeklogo.com/images/D/digi-logo-0670E78EE4-seeklogo.com.png" alt="" width="200" height="200">
+      
+      <p>Login User</p>
+      <%- include ("./partails/validationMessages") %>
+    </div>
+
+    <div class="form-label-group">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required
+        value="<%= typeof email != 'undefined' ? email : '' %>" autofocus>
+        <label for="inputEmail">Email address</label>
+      </div>
+    
+      <div class="form-label-group">
+        <input type="password"   name="password" class="form-control" placeholder="Password" required
+        value="<%= typeof password != 'undefined' ? password : '' %>">
+        <label for="inputPassword">Password</label>
+      </div>
+      
+      
+    <button type="submit" class="btn btn-lg btn-danger btn-block">Login</button>  
+    <p class="mt-5 mb-3 text-muted text-center">New Account? <a href="/users/register">Register</a></p>
+  </form>
+  

@@ -1,0 +1,34 @@
+<div class="form-signin" action="/api/digiusersbyname" method="GET">
+    <div class="text-center mb-4">
+
+      <p>Search & Find</p>
+    </div>
+
+    <div class="form-label-group">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Search by name" required/>
+      </div>
+    
+    <button type="button" id="ajaxBtn" class="btn btn-lg btn-danger btn-block">Search & Find</button> 
+    <ul id="result">
+
+    </ul>
+    </div>
+  <script>
+      $(document).ready(function() {
+          $('#ajaxBtn').click(function(){
+			$('#result').text('');
+            jQuery.get('/api/digiusersbyname/ali',
+             function (data, status) {
+                var dataArray =data;
+                    for (var i = 0; i < dataArray.length; i++){
+                    var name = dataArray[i].name;
+                    $("#result").append('<li data-grid-id="1"><a href="#">' + name + '-'+ dataArray[i].email+'<span class="glyphicon glyphicon-chevron-right"></span></a></li>');
+                    };
+                 console.log(data[0].name);
+				//$('.result').html(data[0].name);
+			});
+		});
+});
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

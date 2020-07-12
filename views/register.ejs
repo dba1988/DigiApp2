@@ -1,0 +1,35 @@
+<form class="form-signin" action="/users/register" method="POST">
+    <div class="text-center mb-4">
+      <img class="mb-4" src="https://seeklogo.com/images/D/digi-logo-0670E78EE4-seeklogo.com.png" alt="" width="200" height="200">
+      
+      <p>Register New User</p>
+      <%- include ("./partails/validationMessages") %>
+    </div>
+    <div class="form-label-group">
+        <input type="name" id="name" name="name" class="form-control" placeholder="Full Name"
+        value="<%= typeof name != 'undefined' ? name : '' %>"
+        
+         autofocus>
+        <label for="inputEmail">Full Name</label>
+      </div>
+    <div class="form-label-group">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email address" 
+        value="<%= typeof email != 'undefined' ? email : '' %>">
+        <label for="inputEmail">Email address</label>
+      </div>
+    
+      <div class="form-label-group">
+        <input type="password"   name="password" class="form-control" placeholder="Password" 
+        value="<%= typeof password != 'undefined' ? password : '' %>">
+        <label for="inputPassword">Password</label>
+      </div>
+      <div class="form-label-group">
+        <input type="password"  name="repassword" class="form-control" placeholder="Password" 
+        value="<%= typeof repassword != 'undefined' ? repassword : '' %>">
+        <label for="inputPassword">Confirm Password</label>
+      </div>
+      
+    <button type="submit" class="btn btn-lg btn-danger btn-block">Register</button>  
+    <p class="mt-5 mb-3 text-muted text-center">Have An Account? <a href="/users/login">Login</a></p>
+  </form>
+  

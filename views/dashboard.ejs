@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    
+  
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Welcome <%= user.name %></a>
+        </li>
+        
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <a href="/users/logout" class="btn btn-secondary">Logout</a> 
+      </div>
+    </div>
+  </nav>
+  <div class="form-signin" action="/api/digiusersbyname" method="GET">
+    <div class="text-center mb-4">
+
+      <p>Search & Find</p>
+    </div>
+
+    <div class="form-label-group">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Search by name" required/>
+      </div>
+    
+    <button type="button" id="ajaxBtn" class="btn btn-lg btn-danger btn-block">Search & Find</button> 
+    <ul id="result">
+
+    </ul>
+    </div>
+  <script>
+      $(document).ready(function() {
+          $('#ajaxBtn').click(function(){
+			$('#result').text('');
+            jQuery.get('/api/digiusersbyname/ali',
+             function (data, status) {
+                var dataArray =data;
+                    for (var i = 0; i < dataArray.length; i++){
+                    var name = dataArray[i].name;
+                    $("#result").append('<li data-grid-id="1"><a href="#">' + name + '-'+ dataArray[i].email+'<span class="glyphicon glyphicon-chevron-right"></span></a></li>');
+                    };
+                 console.log(data[0].name);
+				//$('.result').html(data[0].name);
+			});
+		});
+});
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  
