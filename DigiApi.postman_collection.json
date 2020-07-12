@@ -1,0 +1,168 @@
+{
+	"id": "3fcb4252-f897-de34-ddae-60895be5812f",
+	"name": "DigiApi",
+	"description": "",
+	"order": [
+		"43381bcc-b302-3a95-75ca-5ad22206435b",
+		"99582b9f-a453-b49b-f37d-e3e8ca39fa61",
+		"7395c7f1-ad4b-731a-9774-16ae430ceae0",
+		"519310cf-97ea-d802-768c-cb70efb9bf9e"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1594546078577,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "43381bcc-b302-3a95-75ca-5ad22206435b",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/api/register",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "3fcb4252-f897-de34-ddae-60895be5812f",
+			"data": [
+				{
+					"key": "name",
+					"value": "Ali",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "alinode@node.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "1q2w3e4r",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "repassword",
+					"value": "1q2w3e4r",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:5000/api/register",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1594546082808,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "519310cf-97ea-d802-768c-cb70efb9bf9e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5000/api/digiusersbyname/mohammed ali",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3fcb4252-f897-de34-ddae-60895be5812f",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:5000/api/digiusersbyname/mohammed ali",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1594546209114,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7395c7f1-ad4b-731a-9774-16ae430ceae0",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5000/api/digiusers",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3fcb4252-f897-de34-ddae-60895be5812f",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:5000/api/digiusers",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1594546191397,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "99582b9f-a453-b49b-f37d-e3e8ca39fa61",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5000/api/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "3fcb4252-f897-de34-ddae-60895be5812f",
+			"data": [
+				{
+					"key": "email",
+					"value": "a@a.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "1q2w3e",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:5000/api/login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1594546172299,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
